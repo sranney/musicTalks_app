@@ -1,0 +1,24 @@
+.album-collage{
+    position:relative;
+    margin:-7vw;
+    height:110vw;
+    width: 110vw;
+    background-color:black;
+    transition: height 0.3s, width 0.3s;
+    padding:0vw;
+}
+
+.album-collage-img{
+    height:11vw;
+    width:11vw;
+    margin: 0vw;
+    float:left;
+    background-position:center;
+    background-size:contain;
+    background-repeat: no-repeat;
+    transition: all 0.3s;
+}
+
+.album-collage-img:hover {
+    transform: scale(1.2);
+}
