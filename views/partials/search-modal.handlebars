@@ -1,0 +1,26 @@
+<div id="search_modal" class="modal-overlay hidden"> 
+    <div class="modal-content">
+        <span data-modal="search" class="modal-close"><i class="fas fa-times"></i></span>
+        <h1 class="modal-content-title"><span class="title-word">Search&nbsp;&nbsp;&nbsp;</span><i class="mif-search"></i></h1>
+        <div class="modal-tabs">
+            <div class="tab active" data-form="byName">By Band Name</div>
+            <div class="tab" data-form="byGenre">By Genre</div>
+        </div>
+        <div class="modal-sheets">
+            <div id="byName" class="modal-sheet active">
+                <form method="post" action="/bands/search" class="search-form">
+                    <h3 class="search-form-title">Search For Band By Name</h3>
+                    <input class="search-form-input" name="name" id="Name" type="text" placeholder="Enter Band Name" required>
+                    <button class="search-form-btn">Search</button> 
+                </form>
+            </div>
+            <div id="byGenre" class="modal-sheet">
+                <form method="post" action="/bands/search" class="search-form">
+                    <h3 class="search-form-title">Search For Band By Genre</h3>
+                    <input class="search-form-input" name="genre" id="Genre" type="text" placeholder="Enter Genre" required>
+                    <button class="search-form-btn">Search</button> 
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

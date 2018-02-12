@@ -1,0 +1,63 @@
+.discover-bandCard_youtube{
+    border-radius:0 0 5 5;
+    transition: background-color 0.3s;
+}
+
+.discover-bandCard_youtube:hover{
+    background-color:rgb(0,77,64);
+}
+
+.youtube_title{
+    padding-top:2rem;
+    margin-top:0rem;
+    text-transform: uppercase;
+    letter-spacing:0.3rem;
+    font-size: 2rem;
+    color: #fdf5e6;
+    text-align: center;
+    font-family: "Lusitana",serif;
+    transition: letter-spacing 0.3s;   
+}
+
+.youtube_title:hover{
+    letter-spacing:0.6rem;     
+}
+
+.youtube_vids{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    padding-top:1.5rem;
+}
+
+.videoHolder {
+    margin:2rem;
+}
+
+.videoHolder iframe{
+    display:block;
+}
+
+.addToGroupChat{
+    width:100%;
+    border:none;
+    outline:none;
+    color:#fdf5e6;
+    font-size: 2rem;
+    background-color:rgba(0,77,64,0.7);
+    transition: background-color 0.3s;
+    padding:1rem 0rem; 
+    border-radius:0 0 3 3;
+}
+
+.addToGroupChat:hover {
+    background-color:rgba(0,77,64,1);
+}
+
+.discover-bandCard_youtube:hover .addToGroupChat{
+    background-color:rgba(22,28,28,0.7);
+}
+
+.discover-bandCard_youtube:hover .addToGroupChat:hover{
+    background-color:rgba(22,28,28,1);
+}

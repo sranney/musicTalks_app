@@ -1,0 +1,15 @@
+.discover-bandCard-spotify{
+    border-bottom: 2px solid #fdf5e6;
+    display:flex;
+    align-content:center;
+    transition: background-color 0.3s;
+}
+
+.discover-bandCard-spotify:hover{
+    background-color: rgb(0,77,64);
+}
+
+.discover-bandCard-spotify iframe{
+    width:80%;
+    margin: 1rem auto -3rem auto;
+}

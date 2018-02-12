@@ -1,0 +1,10 @@
+.author{
+    transform: translateX(-50%);
+    color: rgb(253,245,230);
+    font-size: 2rem;
+    position: absolute;
+    bottom: 6%;
+    right: -7%;
+    background-image: linear-gradient(to right bottom,rgba(0,77,64,0.5),rgba(0,77,64,1));
+    padding: 1rem;
+}

@@ -1,0 +1,23 @@
+.thumbnail_expandable_front,.thumbnail_expandable_back{
+    overflow:hidden;
+    border-radius:10px;
+    position:absolute;
+    width:100%;
+    top:0%;
+    left:0%;
+    overflow:hidden;
+    background-position:center;
+    background-size: contain;
+    background-repeat:no-repeat;
+    transition:transform 0.75s;
+}
+.thumbnail_expandable_front {
+    height:100%; 
+    z-index:10;
+}
+.thumbnail_expandable_back{
+    height:50%;
+    background-color:rgb(0,77,64);
+    color:rgb(253,245,230);
+    transition: top 0.5s;
+}

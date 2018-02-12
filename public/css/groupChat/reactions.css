@@ -1,0 +1,54 @@
+.reactions{
+    position:absolute;
+    top:15%;
+    right:10%;
+
+}
+
+.reactions span.reaction{
+    color:#eee;
+    font-size:1.05rem;
+    display:block;
+    height:max-content;
+}
+.reactions span.reaction:not(:first-child){
+    margin-top: 0.3rem;
+}
+
+.reactions span.reaction .fas.fa-times{
+    font-size:0.8rem;
+}
+
+.message-holder:hover .reactions {
+    height:max-content;
+    transform: scale(1);
+}
+
+[class^="reaction reaction-"]:hover{
+    text-shadow: 0 0 0.3rem #eee;
+}
+
+.reaction-Like,.reaction-Angry,.reaction-Love,.reaction-Surprise,.reaction-Sad{
+    transition: color 0.5s;
+    transition-delay: 0.4s;
+}
+
+.message-holder:hover .reaction-Like{
+    color: #47FF04;
+}
+
+.message-holder:hover .reaction-Angry{
+    color: #FF0A47;
+}
+
+.message-holder:hover .reaction-Love{
+    color: #FF0AC2;
+}
+
+.message-holder:hover .reaction-Surprise{
+    color: #C2FF04;
+}
+
+.message-holder:hover .reaction-Sad{
+    color: #0AC2FF;
+}

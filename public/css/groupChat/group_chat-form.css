@@ -1,0 +1,44 @@
+.group_chat-form {
+    position: fixed;
+    top:90vh;
+    left:0%;
+    width:100%;
+    display:flex;
+}
+
+.group-chat-form-input,
+.group-chat-form-btn{
+    height:10vh;
+    background-color:#2A2A2B;
+    color:#eee;
+    border:none;
+    outline:none;
+    font-size:1.2rem;
+    border-top:0.3rem solid #eee;
+    font-family:"Lusitana",serif;
+    transition:color 0.3s, background-color 0.3s;
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.group-chat-form-input::-webkit-input-placeholder {
+    color: #eee;
+}
+
+.group-chat-form-input{
+    padding-left: 1.5rem;
+    width:80%;
+}
+
+.group-chat-form-btn{
+    width:20%;
+}
+
+.group-chat-form-input:focus,
+.group-chat-form-btn:hover {
+    background-color:#eee;
+    color: #1B1C1C;
+}
+
+.group-chat-form-input:focus::-webkit-input-placeholder{
+    color: #1B1C1C;
+}

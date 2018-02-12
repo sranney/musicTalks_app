@@ -1,0 +1,26 @@
+.navigation-utilities{
+    margin-left:0.5rem;
+    height:15vh;
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    float:left;
+}
+
+.navigation-utilities-item [class^="mif-"],.navigation-utilities-item [class^="fas"]{
+    font-size:2rem;
+    color:#eeeeee;
+    line-height:15vh;
+    transition:all 0.3s;
+    cursor: pointer;
+}
+
+.navigation-utilities-item [class^="mif-"]:hover,.navigation-utilities-item [class^="fas"]:hover{
+    background-color:#eeeeee;
+    color:rgb(0,77,64);
+    padding:0 3rem;
+}
+
+.navigation-utilities-item{
+    margin-left:3rem;
+}

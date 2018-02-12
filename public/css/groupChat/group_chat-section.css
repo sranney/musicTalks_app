@@ -1,0 +1,31 @@
+.group_chat-section.group_chat-onlinebandUsers,
+.group_chat-section.group_chat-resources {
+    width:15%;
+}
+.group_chat-section.group_chat-container {
+    width:70%;
+}
+
+.group_chat-section.group_chat-onlinebandUsers{
+    overflow:scroll;
+}
+
+.group_chat-section.group_chat-onlinebandUsers::-webkit-scrollbar-track
+{
+    background-color: #1B1C1C;
+    border:none;
+}
+
+.group_chat-section.group_chat-onlinebandUsers::-webkit-scrollbar
+{
+    width: 10px;
+    background-color: #1B1C1C;
+    border:none;
+}
+
+.group_chat-section.group_chat-onlinebandUsers::-webkit-scrollbar-thumb
+{
+    height:15vh;
+    background-color: #eee;
+}
+

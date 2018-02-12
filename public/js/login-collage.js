@@ -33,4 +33,3 @@ const collage_dim_cal = () => {
 collage_dim_cal();
 //I also want it to run when the window dimensions are resized
 window.addEventListener("resize",collage_dim_cal);
-

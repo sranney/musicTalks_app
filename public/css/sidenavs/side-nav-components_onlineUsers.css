@@ -1,0 +1,79 @@
+.onlineUsers-views{
+    position: relative;
+}
+
+.onlineUsers_list{
+    position: absolute;
+    width: 100%;
+    display: block;
+}
+
+.onlineUsers_list.hidden,.onlineUsers_charts.hidden{
+    display:none;
+}
+
+.onlineUsers_list>.onlineUser {
+    color: rgb(253, 245, 230);
+    margin: 1rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    background-color: rgba(61, 117, 108,0.7);
+    transition: transform 0.3s, background-color 0.3s;
+    display:flex;
+}
+
+.onlineUser-card-username {
+    border-right:5px solid rgb(61, 117, 108);
+    text-align: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    transition: border-color 0.3s;
+}
+
+span.onlineUser-card-room {
+    border-left:5px solid rgb(61, 117, 108);
+    text-align: right;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    transition: border-color 0.3s;
+}
+
+.onlineUser:hover{
+    background-color: rgba(61, 117, 108,1);
+    transform: translateX(2%);
+}
+
+.onlineUser:hover .onlineUser-card-username,.onlineUser:hover .onlineUser-card-room{
+    border-color: rgb(253, 245, 230);
+}
+
+.onlineUsers_charts{
+    position: absolute;
+    margin: 1rem 0 0 1rem;
+}
+
+.view_toggle {
+    margin-top:2rem;
+    display:flex;
+    justify-content:space-around;
+}
+
+.view_toggle-btn{
+    border-left:2px solid rgb(253, 245, 230);
+    background-color:rgba(61, 117, 108,0.7);
+    color: rgb(253, 245, 230);
+    width:45%;
+    text-align:center;
+    font-size:1.5rem;
+    padding:1rem;
+    border-radius:10;
+    transition: transform 0.3s, background-color 0.3s;
+}
+.view_toggle-btn:hover{
+    background-color:rgba(61, 117, 108,1);
+    transform:translateY(-5%);
+}
+
+/* .chart_container{
+    transform: scale(0.3);
+} */

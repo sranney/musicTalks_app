@@ -1,0 +1,12 @@
+.thumbnail_container,.thumbnail_container--recommendations{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+
+.thumbnail_container--recommendations{
+    width:80%;
+    margin:0 auto;
+    justify-content:unset;
+    background-color: #4C2811;
+}

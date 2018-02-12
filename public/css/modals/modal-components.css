@@ -1,0 +1,37 @@
+.modal-close {
+    position: absolute;
+    top:5%;
+    right:3%;
+    cursor: pointer;
+    color:rgb(0,77,64);
+}
+
+.modal-tabs{
+    margin-top: 1rem;
+    width:max-content;
+    font-family:"Lusitana",serif;
+    font-weight:400;
+    display:flex;
+    justify-content:center;
+    
+}
+.modal-tabs>.tab {
+    cursor: pointer;
+    align-content: center;
+    background-color:rgb(0,77,64);
+    color:rgb(253,245,230);
+    border-radius:5px 5px 0px 0px;
+    padding:0px 5px;
+    font-size:1.5rem;
+    z-index:6000;
+    border-bottom:2px solid rgb(253,245,230);
+}
+
+.modal-tabs>.tab:first-child {
+    border-right:2px solid rgb(253,245,230);
+}
+
+.modal-tabs>.tab.active {
+    font-size:2rem;
+    border-bottom:none;
+}

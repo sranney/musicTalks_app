@@ -1,0 +1,16 @@
+.thumbnail_flip{
+    position:relative;
+    width:400px;
+    height:400px;
+    margin-top:3rem;
+    overflow:hidden;
+    border-radius:10px;
+}
+
+.thumbnail_flip:hover .thumbnail_flip_front {
+    transform: rotateY(180deg);
+}
+
+.thumbnail_flip:hover .thumbnail_flip_back {
+    transform: rotateY(360deg);
+}

@@ -1,0 +1,49 @@
+.header {
+    width:80%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.discover_header-title{
+    width: max-content;
+    margin: 0rem auto 1rem auto;
+    text-align:center;
+    font-size: 4.2rem;
+    font-family: "Monoton";
+    letter-spacing:0.4rem;
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transform: scale(1) skewX(0deg);
+    background-image: radial-gradient( #ACDEB8,rgb(0,77,64));
+    text-transform: uppercase;
+    transition: letter-spacing 0.3s,transform 0.3s;
+    
+}
+.discover_header-title:hover{
+    letter-spacing: 0.6rem;
+}
+
+
+.discover_header-subtitle {
+    width:70%;
+    margin: 1rem auto 2rem auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.discover_header-subtitle span {
+    font-family: "Lusitana", serif;
+    text-align:center;
+    font-size: 2rem;
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transform: scale(1) skewX(0deg);
+    background-image: radial-gradient( #ACDEB8,rgb(0,77,64));
+    transition: transform 0.3s;
+}
+
+.discover_header-subtitle span:not(.separator):hover {
+    transform: scale(1.2) skewX(-10deg);
+}

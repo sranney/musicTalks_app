@@ -1,0 +1,53 @@
+<div class="group_chat">
+    <div class="group_chat-section group_chat-onlinebandUsers">
+        <h3 class="group_chat-title">Online Fans</h3>             
+    </div>
+    <div class="group_chat-section group_chat-container">
+        <div class="group_chat-messages_heading"><span class="group_chat-messages_heading_title">Messages</span>&nbsp;&nbsp;<span class="peopleTyping"><span class="number">0</span> people typing</span></div>
+        <div class="group_chat-messages">
+            {{#each messages}}            
+                <div class="message-holder" data-uuid={{this.uuid}}>
+                    <div style="background-image:url({{this.photo_URL}})" class="message-photo"></div>
+                    <div class="message-title">
+                        <p class="message-sender">{{this.username}}</p>
+                        <p class="message-date">{{this.dateTime}}</p>
+                    </div>
+                    
+                    {{#if this.isYouTube}}
+                        <iframe class="YouTubeVid" src="{{this.message}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    {{else if this.isSpotify}}
+                        <iframe class="SpotifyPlayList" src="{{this.message}}" frameborder="0" allowtransparency="true"></iframe>
+                    {{else}}
+                        <p class="message-text">{{this.message}}</p>
+                    {{/if}}
+
+                    <div class="message-react">
+                        <span class="tooltip"><i class="icofont icofont-emo-slightly-smile" data-emotion="Like"></i><div class="tooltip-content">Like</div></span>
+                        <span class="tooltip"><i class="icofont icofont-emo-rage" data-emotion="Angry"></i><div class="tooltip-content">Angry</div></span>
+                        <span class="tooltip"><i class="icofont icofont-emo-heart-eyes" data-emotion="Love"></i><div class="tooltip-content">Love</div></span>
+                        <span class="tooltip"><i class="icofont icofont-emo-open-mouth" data-emotion="Surprise"></i><div class="tooltip-content">Surprise</div></span>
+                        <span class="tooltip"><i class="icofont icofont-emo-crying" data-emotion="Sad"></i><div class="tooltip-content">Sad</div></span>
+                    </div>
+                    <div class="reactions">
+                        {{#if this.Like}}<span class="reaction reaction-Like"><i class="icofont icofont-emo-slightly-smile" data-emotion="Like"></i> <i class="fas fa-times"></i> <span class="number">{{this.Like}}</span></span>{{/if}}
+                        {{#if this.Angry}}<span class="reaction reaction-Angry"><i class="icofont icofont-emo-rage" data-emotion="Angry"></i> <i class="fas fa-times"></i> <span class="number">{{this.Angry}}</span></span>{{/if}}
+                        {{#if this.Love}}<span class="reaction reaction-Love"><i class="icofont icofont-emo-heart-eyes" data-emotion="Love"></i> <i class="fas fa-times"></i> <span class="number">{{this.Love}}</span></span>{{/if}}
+                        {{#if this.Surprise}}<span class="reaction reaction-Surprise"><i class="icofont icofont-emo-open-mouth" data-emotion="Surprise"></i> <i class="fas fa-times"></i> <span class="number">{{this.Surprise}}</span></span>{{/if}}
+                        {{#if this.Sad}}<span class="reaction reaction-Sad"><i class="icofont icofont-emo-crying" data-emotion="Sad"></i> <i class="fas fa-times"></i> <span class="number">{{this.Sad}}</span></span>{{/if}}
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+        <form action="/group_chat/send" method="post" class="group_chat-form">
+            <input type="text" name="message" class="group-chat-form-input" placeholder="Enter Message Here (You Can Enter a YouTube or Spotify URL here as well)" required>
+            <button class="group-chat-form-btn">Send Message to Group <i class="icofont icofont-send-mail"></i></button>
+        </form>
+    </div>
+    <div class="group_chat-section group_chat-resources">
+        <h3 class="group_chat-title">{{name}}</h3>
+        <div class="tools">    
+            <button class="group-chat-resources-btn discover"><i class="fas fa-music"></i></button>
+            <button class="group-chat-resources-btn {{#if isFan}}favorited{{/if}}"><i class="mif-heart"></i></button>        
+        </div>
+    </div>
+</div>

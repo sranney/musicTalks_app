@@ -1,0 +1,38 @@
+.modal-overlay {
+    position:fixed;
+    top:0%;
+    left:0%;
+    height:100%;
+    width:100%;
+    background-image:linear-gradient(to right bottom,rgba(0,77,64,0.9) 0%,#ACDEB8 100%);
+    z-index:1000;
+}
+
+.modal-overlay.hidden {
+    display:none;
+}
+
+.modal-overlay.show {
+    display:block;
+}
+
+.modal-content {
+    border-radius:3px;
+    position:fixed;
+    top:0vh;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:60vw;
+    padding:5rem;
+    opacity:0;
+    background-color:rgb(253,245,230);
+    box-shadow:0rem 0rem 3rem black;
+    animation-duration: 1.5s;
+    animation-name:slideIntoView;
+    animation-fill-mode: forwards;
+}
+
+#addBand_modal .modal-content {
+    padding:1rem;
+    height:50vh;
+}

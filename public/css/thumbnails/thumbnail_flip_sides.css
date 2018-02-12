@@ -1,0 +1,23 @@
+.thumbnail_flip_front,.thumbnail_flip_back{
+    overflow:hidden;
+    border-radius:10px;
+    position:absolute;
+    width:400px;
+    height:400px;  
+    top:0%;
+    left:0%;
+    overflow:hidden;
+    background-position:center;
+    background-size: contain;
+    background-repeat:no-repeat;
+    transition:transform 0.75s;
+    backface-visibility:hidden;
+}
+.thumbnail_flip_front {
+    z-index:10;
+}
+.thumbnail_flip_back{
+    background-color:rgb(0,77,64);
+    transform:rotateY(180deg);
+    color:rgb(253,245,230);
+}

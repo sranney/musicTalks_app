@@ -1,0 +1,71 @@
+@keyframes slideIntoView {
+    0%{
+        opacity:0;
+        top:0vh;
+    }
+    50%{
+        opacity:1;
+        top:52vh;
+    }
+    90%{
+        opacity:1;
+        top:52vh;
+    }    
+    100%{
+        opacity:1;
+        top:50vh;
+    }
+}
+
+
+@keyframes show {
+    0%{
+        top:80vh;
+        opacity:0;
+        z-index:-1;        
+    }
+    10%{
+        top:20vh;
+        opacity:1;
+        z-index:100000; 
+    }
+    90%{
+        top:20vh;
+        opacity:1;
+        z-index:100000;         
+    }
+    100%{
+        top:0vh;
+        opacity:0;
+        z-index:-1;
+    }
+}
+
+@keyframes peakfromLeft {
+    0%{
+        left: -20%;
+        opacity:0;
+    }
+    10%{
+        left: 0%;
+        opacity:1;
+    }
+    90%{
+        left:0%;
+        opacity:1;
+    }
+    100%{
+        left:-20%;
+        opacity:0;
+    }
+}
+
+
+@keyframes blur{
+    0%{
+        backdrop-filter:blur(0px);
+    }
+    100%{
+        backdrop-filter:blur(5px);
+    }
+}

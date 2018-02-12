@@ -1,5 +1,6 @@
 /*component css*/
-@import url("base.css");
-@import url("album-collage.css");
-@import url("form-login.css");
-@import url("titles.css");
+@import url("./login_formatting/base_login.css");
+@import url("./login_formatting/album-collage.css");
+@import url("./login_formatting/form-login.css");
+@import url("./login_formatting/title_login.css");
+@import url("./login_formatting/createdBy.css");

@@ -2,18 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" type="image/png" href="./assets/images/favicon.png">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Music Talks - Log In</title>
-    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Bevan|Fredoka+One|Hammersmith+One|Lusitana:700|Monoton|Paytone+One" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/style_login.css">
+    <link href="https://fonts.googleapis.com/css?family=Lusitana:400,700|Monoton" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/fonts/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/metro/3.0.17/css/metro-icons.min.css">
+    <link rel="stylesheet" href="../css/fonts/icofont.css">
+    {{#if login}}
+        <title>Music Talks - Log In</title>
+        <link rel="stylesheet" href="./css/style_login.css">
+        <link rel="shortcut icon" type="image/png" href="./assets/favicon.png">
+    {{/if}}
+    {{#if home}}
+        <title>Music Talks - Home</title>
+        <link rel="stylesheet" href="./css/style_home.css">
+        <link rel="shortcut icon" type="image/png" href="./assets/favicon.png">
+    {{/if}}
+    {{#if allBands}}
+        <title>Music Talks - All Bands</title>
+        <link rel="stylesheet" href="../css/fonts/themify-icons.css">
+        <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+        <link rel="stylesheet" href="../css/style_allBands.css">
+    {{/if}}    
+    {{#if search}}
+        <title>Music Talks - Search</title>
+        <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+        <link rel="stylesheet" href="../css/fonts/themify-icons.css">
+        <link rel="stylesheet" href="../css/style_search.css">
+    {{/if}}
+    {{#if discover}}
+        <title>Music Talks - Discover</title>
+        {{#if specific}}
+            <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+            <link rel="stylesheet" href="../css/fonts/themify-icons.css">
+            <link rel="stylesheet" href="../css/style_discover.css">
+        {{else}}
+            <link rel="shortcut icon" type="image/png" href="./assets/favicon.png">
+            <link rel="stylesheet" href="./css/fonts/themify-icons.css">
+            <link rel="stylesheet" href="./css/style_discover.css">
+        {{/if}}
+    {{/if}}    
+    {{#if groupChat}}
+        <title>Music Talks - Group Chat</title>
+        <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+        <link rel="stylesheet" href="../css/fonts/themify-icons.css">
+        <link rel="stylesheet" href="../css/style_groupChat.css">
+    {{/if}}     
+
 
 </head>
 <body>
-    {{{body}}}
-    <!-- <script src="./js/firebase.js"></script> -->
-    <script src="./js/login-collage.js"></script>
+    {{{body}}}         
 </body>
 </html>

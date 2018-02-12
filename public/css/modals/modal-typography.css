@@ -1,0 +1,20 @@
+.modal-content-title {
+    font-family: 'Monoton', serif;
+    width:max-content;
+    font-size:3rem;
+    text-shadow: -1px -1px 1px #eeeeee, 1px 1px 1px #000;
+    text-transform: uppercase;
+    letter-spacing:0.8rem;
+    margin:0 auto;
+    color:rgb(0,77,64);    
+}
+
+.search-form-title{
+    width:100%;
+    text-align:left;
+    font-family: "Lusitana",serif;
+    font-size:1.5rem;
+    margin:0.5rem 0;
+    color:rgb(253,245,230);
+}
+

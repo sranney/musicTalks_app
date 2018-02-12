@@ -1,0 +1,43 @@
+<div id="notifications_side_nav" class="side-nav-overlay hidden">
+    <div class="side-nav-content hidden">    
+        <div class="notification-header">
+            <div class="notification-header-title">Notifications</div>
+        </div>
+        <div class="side-nav-close">Close</div>
+        <ul class="notif-menu">
+            
+            {{#if noNotifications}}
+                No notifications
+            {{else}}
+                {{#each notifications_forDisplay}}
+                    {{#if this.emot}}
+                        <li class="notification-card notif-card-emot" data-uuid={{this.uuid}} data-type="emot" data-room={{this.room}}>
+                            <div class="notif-card-dateTime">
+                                {{this.dateTime}}
+                            </div>
+                            <div class="notif-card-emot-header">
+                                <i class="icofont {{this.icon}}"></i>
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <p>{{this.notification}}</p>
+                            <div class="notif-card-goTo">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </li>
+                    {{else if this.band}}
+                        <li class="notification-card notif-card-band" data-band="{{this.band}}" data-room={{this.room}} data-type="newBand">
+                            <div class="notif-card-band-header">
+                                <i class="fas fa-music"></i> <i class="fas fa-times"></i>
+                            </div>
+                            <p>New {{this.genre}} band: {{this.band}}</p>
+                            <div class="notif-card-goTo">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>                
+                        </li>
+                    {{/if}}
+                {{/each}}
+            {{/if}}
+
+        </ul>
+    </div>
+</div>

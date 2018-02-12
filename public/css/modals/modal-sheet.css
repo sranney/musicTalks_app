@@ -1,0 +1,27 @@
+.modal-sheets{
+    position:relative;
+    height:15vh;
+}
+
+.modal-sheet{
+    position:absolute;
+    top:0%;
+    left:0%;
+    width:90%;
+
+    background-color:rgb(0,77,64);
+    border-radius:0px 5px 5px 5px;
+    margin-top:-1px;
+    padding:1rem;
+}
+
+.modal-sheet.active{
+    z-index:5000;
+}
+
+#add-form{
+    margin-top:3rem;
+    left:50%;
+    transform: translateX(-50%);
+    border-radius:5px 5px 5px 5px;
+}

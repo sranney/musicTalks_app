@@ -1,0 +1,49 @@
+.side-nav-instr{
+    text-align:center;
+    color:rgb(0,77,64);
+}
+
+.notification-card{
+    font-family: "Lusitana", serif;
+    width:90%;
+    margin: 0 auto;
+    background-color:rgb(0,77,64);
+    list-style:none;
+    margin:0.5rem auto;
+    color: rgb(253,245,230);
+    transition: transform 0.3s;
+}
+
+.notification-card:hover{
+    transform:scale(1.02);
+}
+
+.notif-card-emot-header,.notif-card-band-header{
+    padding:0.5rem;
+    font-size:1.3rem;
+    background-color:#ACDEB8;
+    color:rgb(0,77,64);
+}
+
+.notif-card-emot-header>.fas, .notif-card-band-header>.fas.fa-times{
+    float:right;
+    margin-right:3px;
+    margin-top:3px;
+}
+
+.notif-card-emot-header>.fas:hover{
+    color:#C40233
+}
+
+.notif-card-dateTime{
+    font-size:0.8rem;
+}
+
+.notif-card-goTo{
+    text-align:center;
+    font-size:1.3rem;
+    width:100%;
+    background-color:#ACDEB8;
+    color:rgb(0,77,64);   
+}
+

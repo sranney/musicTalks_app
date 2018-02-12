@@ -1,0 +1,23 @@
+.group_chat-section.group_chat-resources>.tools {
+    display:flex;
+    justify-content:space-around;
+    height:max-content;
+    margin-top:2rem;
+}
+.group-chat-resources-btn{
+    padding:1rem;
+    border-radius:5px;
+    background-color:transparent;
+    color:#eee;
+    font-size:3rem;
+    border:none;
+    transition: background-color 0.3s;
+}
+
+.group-chat-resources-btn:hover{
+    background-color:rgb(0,77,64);
+}
+
+.group-chat-resources-btn.favorited{
+    background-color:rgb(0,77,64);
+}

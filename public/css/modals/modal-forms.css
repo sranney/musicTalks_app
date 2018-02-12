@@ -1,0 +1,89 @@
+.add-form-input,.search-form-input {
+    background-color:rgb(253,245,230);
+    border:2px solid rgb(0,77,64);
+    outline:none;
+    padding:10px;
+    font-family:"Lusitana",serif;
+    color: rgb(0,77,64);
+}
+
+.search-form-input {
+    font-size:2rem;
+    width:70%;
+}
+
+.add-form-input {
+    margin-top:1rem;
+    font-size:1.2rem;    
+}
+
+.add-form-input:placeholder-shown,.search-form-input:placeholder-shown {
+    background-color:transparent;
+    color:rgb(253,245,230);
+    border:2px solid rgb(253,245,230);
+}
+
+.add-form-input::-webkit-input-placeholder,.search-form-input::-webkit-input-placeholder{
+    color:rgb(253,245,230);
+    font-family:"Lusitana",serif;
+}
+
+.add-form-input:focus,.search-form-input:focus {
+    background-color:rgb(253,245,230);
+    color:rgb(0,77,64);
+}
+
+.add-form-input:focus::-webkit-input-placeholder,.search-form-input:focus::-webkit-input-placeholder {
+    color:rgb(0,77,64);
+}
+
+.add-form-btn,.search-form-btn{
+    color: rgb(253,245,230);    
+    padding: 10px;
+    background-color: rgb(0,77,64);
+    outline: none;
+    font-family: "Lusitana",serif;  
+    transition:background-color 0.3s,color 0.3s;  
+}
+
+.add-form-btn:hover,.search-form-btn:hover {
+    color: rgb(0,77,64);
+    background-color:  rgb(253,245,230);
+}
+
+.search-form-btn {
+    font-size: 2rem;
+    border-left: none;
+    margin-left: -3.8px;
+    border-radius: 0px 15px 15px 0px;
+    border-right: 3px solid rgb(253,245,230);
+    border-top: 3px solid rgb(253,245,230);
+    border-bottom: 3px solid rgb(253,245,230);
+}
+
+.add-form-btn {
+    font-size: 1.2rem;
+    border: 3px solid rgb(253,245,230);
+    margin-top:1rem;
+    border-radius:15px;
+    width:100%;
+}
+
+.add-form {
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.form-input-row{
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+}
+.form-input-row>input{
+    width:50%;
+}
+
+.form-input-row.form_links>input{
+    width:33%;
+}

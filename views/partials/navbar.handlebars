@@ -1,0 +1,38 @@
+<div class="navigation-bar">
+    <input type="hidden" data-user = {{currentUser}}>
+
+    <div class="navigation-utilities">
+        {{!-- allbands link --}}
+        <span class="tooltip navigation-utilities-item nav-allbands"><i class="mif-list"></i><div class="tooltip-content">All Bands</div></span>        
+        {{!-- search link --}}
+        <span class="tooltip navigation-utilities-item nav-search"><i class="mif-search"></i><div class="tooltip-content">Search</div></span>
+        {{!-- add band link --}}
+        <span class="tooltip navigation-utilities-item nav-addband"><span class="mif-plus"></span><div class="tooltip-content">Add Band</div></span>  
+        {{!-- breaking music link --}}
+        <span class="tooltip navigation-utilities-item nav-discover"><i class="fas fa-music"></i><div class="tooltip-content">Discover</div></span>
+    </div>
+
+    <div class="navigation-logo">Music Talks</div>
+
+    <div class="navigation-social">
+        {{!-- users link --}}
+        <span class="tooltip navigation-social-item nav-allusers" href="/users">
+            <i class="mif-users"></i>
+            <div class="onlineUsers_numb"></div>
+            <div class="tooltip-content">Online Users</div>
+            </span>
+        {{!-- profile link --}}
+        <span class="tooltip navigation-social-item nav-profile" href="/profile"><i class="mif-user"></i><div class="tooltip-content">Profile</div></span>
+        {{!-- notifications link --}}
+        <span class="tooltip navigation-social-item nav-notifs" href="#">
+            <i class="mif-bell"></i>
+            <div class="notif_numb">{{numNotifs}}</div>
+            <div class="tooltip-content">Notifications</div>
+        </span> 
+
+        {{!-- logout link --}}
+        <span class="tooltip navigation-social-item nav-logout" href="#"><i class="mif-exit"></i><div class="tooltip-content">Log Out</div></span>
+    </div>
+
+    
+</div>

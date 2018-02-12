@@ -1,0 +1,9 @@
+<div class="band-card">
+    <div class="band-card-pic" style="background-image:url({{cover_url}})"></div>
+    <div class="band-card-media">
+        <h1>{{name}}</h2>
+        <h2>{{genre}}</h2>
+        <h2>Number of Fans: {{numFans}}</h2>
+        {{#if validSpotifyURL}}{{>spotify}}{{else}}<h2>No Spotify Playlist</h2>{{/if}}
+    </div>
+</div>

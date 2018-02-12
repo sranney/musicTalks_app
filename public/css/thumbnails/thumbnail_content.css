@@ -1,0 +1,110 @@
+.thumbnail-name,
+.thumbnail-genre,
+.thumbnail-fans,
+.thumbnail-links{
+    position:absolute;
+    left:50%;
+    width:max-content;
+    transform: translate(-50%,-50%);
+
+    font-family:"Lusitana",serif; 
+}
+
+.thumbnail-name{
+    font-size:3rem;
+    top:5%;  
+}
+
+.thumbnail-genre{
+    font-size:2rem;
+    top:25%;
+}
+
+.thumbnail-fans {
+    font-size:1rem;
+    top: 45%;
+}
+
+.thumbnail-links{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    font-size:3rem;
+    top: 70%;
+}
+
+.thumbnail_expandable_back>.thumbnail-genre,
+.thumbnail_expandable_back>.thumbnail-fans,
+.thumbnail_expandable_back>.thumbnail-links {
+    font-size:1rem;
+}
+
+.thumbnail_expandable_back>.thumbnail-name{
+    font-size:1.2rem;
+    top:5%;  
+}
+
+.thumbnail_expandable_back>.thumbnail-genre{
+    top:25%;
+}
+
+.thumbnail_expandable_back>.thumbnail-fans {
+    top: 45%;
+}
+
+.thumbnail_expandable_back>.thumbnail-links{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    top: 65%;
+}
+
+.thumbnail-links>div{
+    cursor:pointer;
+    width:25%;
+    text-align:center;
+    color:rgb(0,77,64);
+    background-color: rgb(253,245,230);
+    box-shadow:inset 0 0 1rem black;
+    padding-bottom:1rem;
+    transition: background-color 0.3s;
+}
+
+.thumbnail-links>div:nth-child(1){
+    border-radius:15px 0px 0px 15px;
+    margin-right:-3px;
+    border-right:1px solid rgb(0,77,64);
+}
+
+.thumbnail-links>div:nth-child(2){
+    border-radius:0px 0px 0px 0px;
+    margin:0px -3px;
+    border-right:1px solid rgb(0,77,64);
+    border-left:1px solid rgb(0,77,64);
+}
+
+.thumbnail-links>div:nth-child(3){
+    border-radius:0px 15px 15px 0px;
+    margin-left:-3px;
+    border-left:1px solid rgb(0,77,64);
+}
+
+.thumbnail-links>div:hover {
+    background-color:#ACDEB8;
+}
+
+.thumbnail-links>div.favorited{
+    background-color:#ACDEB8;
+}
+
+.thumbnail_favorited{
+    padding:1rem;
+    background-color:rgb(253,245,230);
+    color:rgb(0,77,64);
+    border-radius:50%;
+    font-size:2rem;
+    position:absolute;
+    bottom:2.5%;
+    right:2.5%;
+    transform: translate(-50%,-50%);
+}

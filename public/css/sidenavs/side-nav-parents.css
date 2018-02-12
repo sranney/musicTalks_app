@@ -1,0 +1,39 @@
+.side-nav-overlay{
+    display:block;
+    z-index:1000000;
+    background-image:linear-gradient(to right bottom,rgba(0,77,64,0.7),rgba(172,222,184,0.7));
+    position:fixed;
+    top:0%;
+    left:0%;
+    width:100vw;
+    height:100vh;
+    -webkit-backdrop-filter:blur(0px);
+    backdrop-filter:blur(0px);
+    animation-name:blur;
+    animation-delay:0.5s;
+    animation-duration:2.5s;
+    animation-fill-mode:forwards;
+}
+.side-nav-overlay.hidden{
+    display:none;
+    -webkit-backdrop-filter:blur(0px);
+    backdrop-filter:blur(0px);
+    animation:none;
+}
+
+.side-nav-content{
+    background-color:rgb(253,245,230);
+    position:fixed;
+    top:0%;
+    left:0%;
+    height:100vh;
+    width:25%;
+    overflow-Y:auto;
+    box-shadow: 1rem 0rem 4rem black;
+    transition-delay:0.3s;
+    transition:left 3s;
+}
+
+.side-nav-content.hidden{
+    left:-100%;
+}

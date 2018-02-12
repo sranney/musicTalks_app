@@ -1,0 +1,19 @@
+.thumbnail_expandable{
+    position:relative;
+    transform:scale(0.1);
+    transform-origin: center;
+    width:15vw;
+    height:15vw;
+    margin:3rem;
+    border-radius:10px;
+    transition: transform 0.5s;
+}
+
+.thumbnail_expandable.shown {
+    transform: scale(1);
+}
+
+.thumbnail_expandable:hover .thumbnail_expandable_back {
+    top:100%;
+    transition-delay: 0.5s;
+}

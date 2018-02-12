@@ -1,0 +1,38 @@
+.notification-header,.onlineUsers-header{
+    background-image:url("../../assets/images/side_nav_header_background.png");
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+    position:relative;
+    height:20%;
+}
+
+.notification-header-title,.onlineUsers-header-title{
+    text-transform: uppercase;
+    font-family: "Lusitana", serif;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size:2rem;
+    color:white;
+    background-color:rgba(0,77,64,0.7);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    border-radius:2px;
+    padding:10px;
+    width:max-content;
+}
+
+.side-nav-close{
+    width: 80%;
+    text-align: center;
+    font-family: "Lusitana",serif;
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: #eee;
+    background-color: #C40233;
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+}

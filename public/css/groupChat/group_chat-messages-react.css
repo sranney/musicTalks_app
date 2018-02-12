@@ -1,0 +1,49 @@
+.message-react{
+    width:100%;
+    text-align:center;
+    font-size:2rem;
+    transition-delay:0.3s;
+    transform:scale(0);
+    transform-origin:center;
+    transition: transform 0.3s;
+
+}
+
+.message-holder:hover .message-react{
+    height:max-content;
+    transform: scale(1);
+}
+
+.message-react .icofont {
+    color:#eee;
+    cursor: pointer;
+}
+
+.message-react .icofont:hover{
+    text-shadow: 0 0 0.3rem #eee;
+}
+
+.message-react .icofont-emo-slightly-smile:hover{
+    color: #47FF04;
+}
+
+.message-react .icofont-emo-rage:hover{
+    color: #FF0A47;
+}
+
+.message-react .icofont-emo-heart-eyes:hover{
+    color: #FF0AC2;
+}
+
+.message-react .icofont-emo-open-mouth:hover{
+    color: #C2FF04;
+}
+
+.message-react .icofont-emo-crying:hover{
+    color: #0AC2FF;
+}
+
+.message-react a, .message-react a:visited,.message-react a:link{
+    text-decoration:none;
+    color: #eee;
+}

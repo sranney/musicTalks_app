@@ -1,0 +1,16 @@
+.navigation-logo{
+    position:absolute;
+    top:0%;
+    left:50%;
+    transform: translateX(-50%);
+    width:max-content;
+    margin:0 auto;
+    font-size:4rem;
+    padding:1vh 0;
+    text-shadow: -1px -1px 1px #eeeeee, 1px 1px 1px #000;
+    font-family: 'Monoton', serif;
+    text-transform: uppercase;
+    letter-spacing:0.8rem;
+    cursor: pointer;
+    transition: text-shadow 0.3s;
+}

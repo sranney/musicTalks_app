@@ -1,0 +1,19 @@
+<div class="thumbnail_container">
+    {{#each bands}}
+        <div class="thumbnail_flip">
+            <div class="thumbnail_flip_front" style="background-image:url({{this.thumbnail_url}})">
+            {{#if fanOf}}<div class="thumbnail_favorited"><span class="mif-checkmark"></span></div>{{/if}}
+            </div>
+            <div class="thumbnail_flip_back">
+                <p class="thumbnail-name">{{this.name}}</p>
+                <p class="thumbnail-genre">Genre: {{this.genre}}</p>
+                <p class="thumbnail-fans">Number of Fans: 150</p>
+                <div class="thumbnail-links">
+                    <div class="thumbnail-chat" data-name="{{this.name}}"><span class="mif-bubbles"></span></div>
+                    <div class="thumbnail-add {{#if fanOf}}favorited{{/if}}"><span data-name="{{this.name}}" class="mif-heart"></span></div>
+                    <div class="thumbnail-discover"><span class="mif-headphones"></span></div>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>

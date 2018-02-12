@@ -1,0 +1,41 @@
+.tooltip {
+    position: relative;
+}
+
+.tooltip-content {
+    position:absolute;
+    top:110%;
+    left:50%;
+    transform: translateX(-50%);
+    opacity:0;
+    transition: opacity 0.3s;
+    font-size:1rem;
+    width:max-content;
+    margin-top:0%;
+    line-height:100%;
+    padding:1rem;
+    background-color:rgb(0,77,64);
+    color:#eeeeee;  
+    font-family: "Lusitana",serif;
+    font-weight:400;
+    display:none;
+}
+
+.tooltip [class^="mif-"]:hover~.tooltip-content,.tooltip [class^="fas"]:hover~.tooltip-content{
+    opacity:1;
+    display:block;
+}
+
+.tooltip [class^="icofont"]~.tooltip-content {
+    background-color:transparent;
+    top:-150%;
+    left:50%;
+}
+
+.tooltip [class^="icofont"]:hover~.tooltip-content {
+    background-color:transparent;
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(10px);
+    opacity:1;
+    display:block;
+}

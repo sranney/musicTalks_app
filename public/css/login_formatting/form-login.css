@@ -1,0 +1,42 @@
+form {
+    z-index:1000;
+    position: absolute;
+    top:53%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.form-login-btn,.form-signup-btn{
+    cursor:pointer;
+    font-family: 'Lusitana', serif;
+    font-weight:700;
+    font-size:3rem;
+    padding:1.2rem;
+    outline:none;
+    border:none;
+    transition:all 0.4s;
+}
+
+.form-login-btn{
+background-color: rgba(0,77,64,0.7);
+color:rgba(253,245,230,0.7);
+margin-right:-3px;
+border-radius:0.5rem 0rem 0rem 0.5rem;
+}
+
+.form-signup-btn{
+background-color:rgba(253,245,230,0.7);
+color:rgba(0,77,64,0.7);
+margin-left:-3px;
+border-radius:0rem 0.5rem 0.5rem 0;
+}
+
+.form-signup-btn:hover{
+    background-color:rgba(253,245,230,1);
+    color: rgba(0,77,64,1);
+}
+
+.form-login-btn:hover{
+    background-color: rgba(0,77,64,1);
+    color:rgba(253,245,230,1);
+}

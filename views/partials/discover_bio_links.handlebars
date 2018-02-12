@@ -1,0 +1,14 @@
+<div class="discover-bandCard-bioLinks">
+    <div class="bio">
+        <p class="bio_title">Biography</p>
+        <p class="bio_text">{{bio}}</p>
+    </div>
+    <div class="externalLinks">
+        <p class="externalLinks_title">Links</p>
+        <ul class="externalLinks_list">
+            {{#each externalLinks}}
+                <li><a href="{{this.link}}" class="externalLink" target="_blank">{{this.display}}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+</div>

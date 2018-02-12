@@ -1,0 +1,18 @@
+<div class="thumbnail_container--recommendations">
+    {{#each recommendations}}
+        <div class="thumbnail_expandable shown">
+            <div class="thumbnail_expandable_front" style="background-image:url({{this.thumbnail_url}})">
+            {{#if fanOf}}<div class="thumbnail_favorited"><span class="mif-checkmark"></span></div>{{/if}}
+            </div>
+            <div class="thumbnail_expandable_back">
+                <p class="thumbnail-name">{{this.name}}</p>
+                <p class="thumbnail-genre">{{this.genre}}</p>
+                <div class="thumbnail-links">
+                    <div class="thumbnail-chat" data-name="{{this.name}}"><span class="mif-bubbles"></span></div>
+                    <div class="thumbnail-add"><span data-name="{{this.name}}" class="mif-heart"></span></div>
+                    <div class="thumbnail-discover"><span class="mif-headphones"></span></div>
+                </div>
+            </div>
+        </div>
+    {{/each}}     
+</div>

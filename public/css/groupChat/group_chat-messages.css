@@ -1,0 +1,50 @@
+.group_chat-messages{
+    width:98%;
+    height:60vh;
+    margin:2vh 0;
+    background-color: #2A2A2B;
+    box-shadow:inset 0rem 0rem 2rem black;
+    padding:1vh;
+    border-radius:2px;
+    overflow-Y:scroll;
+}
+
+.group_chat-messages_heading{
+    width:98%;
+    height:2vh;
+    margin:0px;
+    color:#eee;
+    padding:1vh;
+}
+
+.group_chat-messages_heading_title{
+    font-size:2rem;
+    font-weight:700;
+    font-family:"Lusitana",serif;
+}
+.peopleTyping{
+    float:right;
+    line-height: 6vh;
+    text-align:right;
+}
+
+.group_chat-messages::-webkit-scrollbar-track
+{
+    background-color: #1B1C1C;
+    border:none;
+}
+
+.group_chat-messages::-webkit-scrollbar
+{
+    width: 15px;
+    background-color: #1B1C1C;
+    border:none;
+}
+
+.group_chat-messages::-webkit-scrollbar-thumb
+{
+    height:15vh;
+    background-color: #eee;
+    transition:background-color 0.8s;
+}
+

@@ -1,0 +1,73 @@
+.toast {
+    background-color:#ACDEB8;
+    font-size: 1.6rem;
+    font-family:"Lusitana",serif;
+    width:max-content;
+    padding:2rem;
+    color:rgb(0,77,64);
+    position:fixed;
+    left:70vw;
+    top:80vh;    
+}
+.toast.hidden {
+    opacity:0;
+    z-index:-1;
+}
+
+.toast.shown{
+    animation-duration: 3s;
+    animation-name: show;
+}
+
+.toast [class^="mif-"] {
+    margin-top:-11px;
+}
+
+.notification_toast{
+    text-align: center;
+    padding-top:5vh;
+    padding-left:2vh;
+    padding-right:2vh;
+    background-color:#ACDEB8;
+    font-size:1.2rem;
+    width: 20%;
+    height:25vh;
+    z-index:500000;
+    color:rgb(0,77,64);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    position: fixed;
+    opacity: 0;
+    top:19vh;
+    animation-name: peakfromLeft;
+    animation-duration:5s;
+    transition:top 0.5s,height 0.5s;
+}
+
+.notification_toast-header{
+    position:absolute;
+    background-color:rgb(0,77,64);
+    color:#ACDEB8;
+    top: 0%;
+    left:0%;
+    width:100%;
+    font-size:2rem;
+    text-align:center;
+}
+
+.notification_dateTime {
+    font-size:0.7rem;
+}
+
+.notification_toast i {
+    font-size:3rem;
+}
+
+.notification_toast.collapsed {
+    height:10vh;
+}
+
+.notification_toast.collapsed p,.notification_toast.collapsed hr,.notification_toast.collapsed .notification_toast-header{
+    display:none;
+}
