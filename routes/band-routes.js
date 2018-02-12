@@ -21,7 +21,7 @@ router.post("/add",authCheck,(req,res)=>{
 
     Band.findOne({name:BandObj.name}).then(result=>{
         console.log(result);
-        if(result.length===0){
+        if(!result){
             if(BandObj.spotify.indexOf("embed")===-1){
                 BandObj.spotify = BandObj.spotify.replace("open.spotify.com","open.spotify.com/embed");
             }

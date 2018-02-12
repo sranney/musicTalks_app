@@ -1,8 +1,12 @@
 // const {ClientID,ClientSecret} = process.env.GoogleClientID || require("../../secrets/google_cred_musictalksapp.js");
 
-const ClientID = process.env.GoogleClientID;
-const ClientSecret = process.env.GoogleClientSecret;
+let ClientID = process.env.GoogleClientID;
+let ClientSecret = process.env.GoogleClientSecret;
 
+if (!ClientID) {
+    ClientID = require("../../secrets/google_cred_musictalksapp.js").ClientID;
+    ClientSecret = require("../../secrets/google_cred_musictalksapp.js").ClientSecret;
+}
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20");
 const User = require("../models/user.js");
