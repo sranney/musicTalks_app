@@ -16,29 +16,30 @@ const markFavorites = (dataArr,username) => {
 router.post("/add",authCheck,(req,res)=>{
     let {username} = req.user;
 
-    console.log("*******************************\n*******************************\n*******************************\n")
-
-    console.log("username",username);
     let BandObj = req.body;
-    console.log("band name: ", BandObj.name);
 
-    console.log("*******************************\n*******************************\n*******************************\n")
-    
-    BandObj.spotify = BandObj.spotify.replace("open.spotify.com","open.spotify.com/embed");
-    BandObj.fans = [username];
-    const {genre} = BandObj;
-    BandObj.genre = `${genre.substr(0,1).toUpperCase()}${genre.substr(1)}`;
-    const {name} = BandObj
-    User.update({username},{$push:{favoriteBands:BandObj.name}}).then((data)=>{
-        console.log(data);
-        new GroupChat({room:name})
-        .save().then(GroupChatRoom=>{
-            new Band(BandObj)
-            .save().then(newBand=>{
-                console.log("new band created: ",newBand);
+
+    Band.findOne({name:BandObj.name}).then(result=>{
+        if(result.length===0){
+            if(BandObj.spotify.indexOf("embed")===-1){
+                BandObj.spotify = BandObj.spotify.replace("open.spotify.com","open.spotify.com/embed");
+            }
+            BandObj.fans = [username];
+            const {genre} = BandObj;
+            BandObj.genre = `${genre.substr(0,1).toUpperCase()}${genre.substr(1)}`;
+            const {name} = BandObj
+            User.update({username},{$push:{favoriteBands:BandObj.name}}).then((data)=>{
+                console.log(data);
+                new GroupChat({room:name})
+                .save().then(GroupChatRoom=>{
+                    new Band(BandObj)
+                    .save().then(newBand=>{
+                        console.log("new band created: ",newBand);
+                    });
+                });
             });
-        });
-    });
+        }
+    })
 })
 
 router.get("/all",authCheck,(req,res)=>{
