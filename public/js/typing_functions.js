@@ -27,7 +27,7 @@ const TypingDetected = ()=>{
     }
 }
 
-MsgInput.addEventListener("keyup",TypingDetected);
+MsgInput.addEventListener("keydown",TypingDetected);
 
 socket.on(`typers_${room}`,numTypers =>{
     typers.textContent = numTypers;
