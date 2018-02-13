@@ -1,6 +1,18 @@
 const addBandForm = document.querySelector(".add-form");
-const addBandFormInputs = addBandForm.querySelectorAll(".form-input-row>.add-form-input");
+const addBandFormInputs = addBandForm.querySelectorAll(".form-input-row>.add-form-input,.form-input-row>.tooltip>.add-form-input");
+console.log(addBandFormInputs);
 const FavoriteToast = document.querySelector(".toast.toast-favorite");
+
+const ShowFavoriteToast = (add)=> {
+    FavoriteToast.classList.remove("hidden");
+    FavoriteToast.classList.add("shown");
+    add ? FavoriteToast.innerHTML = FavoriteToast.innerHTML + " and Added" : null;
+    setTimeout(()=>{
+        FavoriteToast.classList.add("hidden");
+        FavoriteToast.classList.remove("shown");
+        add ? FavoriteToast.innerHTML = FavoriteToast.innerHTML.replace(" and Added",""):null;     
+    },3000);
+}
 
 addBandForm.addEventListener("submit",function(e){
     e.preventDefault();
@@ -14,6 +26,8 @@ addBandForm.addEventListener("submit",function(e){
         return addBandFormInput.getAttribute("name");
     });
 
+    
+
     keys.forEach((key,indx)=> {
         BandObj[key] = values[indx];
     })
@@ -26,8 +40,13 @@ addBandForm.addEventListener("submit",function(e){
         return addBandFormInput.value = "";
     });
 
+    
+    AddBandModal.classList.add("hidden");
+    Body.classList.remove("modal-open");
+
     createNewCard(BandObj,"favorite");
 
+    ShowFavoriteToast("add");
 });
 
 const createNewCard = (BandObj,type)=>{
@@ -69,6 +88,7 @@ const createNewCard = (BandObj,type)=>{
     thumbnail_links.classList.add("thumbnail-links");
     const chatBtn = document.createElement("div");
     chatBtn.classList.add("thumbnail-chat");
+    chatBtn.setAttribute("data-name",BandObj.name);
     const icon_chat = document.createElement("span");
     icon_chat.classList.add("mif-bubbles");
     chatBtn.appendChild(icon_chat);
@@ -79,7 +99,7 @@ const createNewCard = (BandObj,type)=>{
     icon_add.classList.add("mif-heart");
     addBtn.appendChild(icon_add);
     const discoverBtn = document.createElement("div");
-    discoverBtn.classList.add("thumbnail-breaking_music");
+    discoverBtn.classList.add("thumbnail-discover");
     const icon_discover = document.createElement("span");
     icon_discover.classList.add("mif-headphones");
     discoverBtn.appendChild(icon_discover);
@@ -91,19 +111,35 @@ const createNewCard = (BandObj,type)=>{
     newThumbnail.appendChild(thumbnail_back);
 
     document.querySelector(`.thumbnail_container${type==="new"&&loc==="/home" ? "--recommendations":""}`).appendChild(newThumbnail);
+    
+    //get the card that was just added and add an event listener to it
+    const addedThumbnail = document.querySelector(`.thumbnail_container${type==="new"&&loc==="/home" ? "--recommendations":""}`).querySelector(`.thumbnail_${cardType}:last-child`);
+    //find the favorite button that was added to this thumbnail and add an event listener to it
+    const newaddBtn = addedThumbnail.querySelector(".thumbnail-add");
+    newaddBtn.addEventListener("click",addToFavorites);    
+
+    //find the chat button that was added to this thumbnail and add an event listener to it
+    const newchatBtn = addedThumbnail.querySelector(".thumbnail-chat");
+    BandObj.name
+    newchatBtn.addEventListener("click",function(){
+        const {name} = this.dataset;
+        const RoomName = name.replace(" ","_");
+        window.location.href=`/group_chat/${RoomName}`;
+    });
+
+    //find the discover button that was added to this thumbnail and add an event listener to it
+    const newdiscoverBtn = addedThumbnail.querySelector(".thumbnail-discover");
+
+    const GoToBandDiscover = function(){
+        const bandName = this.parentNode.querySelector(".thumbnail-chat").dataset.name;
+        window.location.href=`/discover/${bandName.replace(" ","_")}`
+    };
+
+    newdiscoverBtn.addEventListener("click",GoToBandDiscover);
 
 };
 
 const AddBtns = document.querySelectorAll(".thumbnail-add");
-
-const ShowFavoriteToast = ()=> {
-    FavoriteToast.classList.remove("hidden");
-    FavoriteToast.classList.add("shown");
-    setTimeout(()=>{
-        FavoriteToast.classList.add("hidden");
-        FavoriteToast.classList.remove("shown");        
-    },3000);
-}
 
 //when button is clicked on existing card to add to favorites - sends data to server which sends data to database
 //then creates a toast. if the band thumbnail was found in the recommendations section, then the code also moves the card from recommendations to favorites

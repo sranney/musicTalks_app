@@ -1,3 +1,7 @@
 <div class="discover-bandCard-spotify">
-    <iframe src="{{band.spotify}}" frameborder="0" allowtransparency="true"></iframe>
+    {{#if validSpotifyURL}}
+        <iframe src="{{band.spotify}}" frameborder="0" allowtransparency="true"></iframe>
+    {{else}}
+        No Spotify Playlist
+    {{/if}}
 </div>

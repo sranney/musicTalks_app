@@ -33,3 +33,9 @@ body::-webkit-scrollbar-thumb
 body.modal-open,body.sideNav-open {
     overflow:hidden;
 }
+
+@media (max-width:1000px){
+    body{
+        padding-top:40vh;
+    }
+}

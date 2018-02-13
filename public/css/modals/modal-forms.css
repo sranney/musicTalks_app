@@ -87,3 +87,13 @@
 .form-input-row.form_links>input{
     width:33%;
 }
+
+.tooltip>.add-form-input~.tooltip-content {
+    color: rgb(253,245,230);
+    opacity: 0;
+    font-size: 1rem;
+    z-index: 100000000000;
+    display: none;
+    border-radius:6px;
+    background-image: linear-gradient(to right bottom,#045043 0%,#aadcb6 50%,#045043 100%);
+}

@@ -14,3 +14,28 @@
     cursor: pointer;
     transition: text-shadow 0.3s;
 }
+
+
+@media (max-height:500px){
+    .navigation-logo{
+        font-size:3.6rem;
+    }
+}
+
+@media (max-width:1300px){
+    
+    .navigation-logo{
+        font-size:3vw;
+    }
+}
+
+@media (max-width:1000px){
+
+    .navigation-logo{
+        font-size:7vw;
+        position: static;
+        top: 0%;
+        left: 0%;
+        transform: translateX(0%);        
+    }
+}

@@ -30,9 +30,12 @@ const getWikiAndRender = (band,req,res,currentUser,noNotifications,notifications
         var bio = body.replace(body.substr(0,body.indexOf("<p")),"").replace(/<.*?>/g,"");
         bio = bio.replace(bio.substr(bio.indexOf("Contents")),"").trim();
         bio = bio.replace("\n","<br>");
+        
+        const validSpotifyURL = band.spotify.indexOf("open.spotify.com")>-1;
 
         res.render("discover",{
                                 band,
+                                validSpotifyURL,
                                 externalLinks,
                                 bio,
                                 discover:true,

@@ -10,9 +10,18 @@
                         <input class="add-form-input" type="text" name="genre" placeholder="Enter Band Genre" required>
                     </div>
                     <div class="form-input-row form_links"> 
-                        <input class="add-form-input" type="text" name="spotify" placeholder="Enter Spotify URL" required>
-                        <input class="add-form-input" type="text" name="cover_url" placeholder="Enter URL for Band Cover" required>
-                        <input class="add-form-input" type="text" name="thumbnail_url" placeholder="Enter URL for Thumbnail" required>
+                        <div class="tooltip">
+                            <input class="add-form-input" type="text" name="spotify" placeholder="Enter Spotify URL" required>
+                            <div class="tooltip-content" data-instr="spotify">Click Here For Instructions</div>
+                        </div>
+                        <div class="tooltip">
+                            <input class="add-form-input" type="text" name="cover_url" placeholder="Enter URL for Band Cover" required>
+                            <div class="tooltip-content" data-instr="cover">Click Here For Instructions</div>
+                        </div>
+                        <div class="tooltip">
+                            <input class="add-form-input" type="text" name="thumbnail_url" placeholder="Enter URL for Thumbnail" required>
+                            <div class="tooltip-content" data-instr="thumbnail">Click Here For Instructions</div>
+                        </div>
                     </div>                        
                     <button class="add-form-btn">Add Band</button> 
                 </form>

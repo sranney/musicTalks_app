@@ -7,3 +7,10 @@
     height:15vh;
     box-shadow:0rem 0.5rem 4rem black;
 }
+
+@media (max-width:1000px){
+    .navigation-bar{
+        height:35vh;
+        margin-top:-40vh;
+    }
+}

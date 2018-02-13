@@ -3,7 +3,7 @@
     height:15vh;
     display:flex;
     align-content: center;
-    justify-content: center;
+    justify-content: space-around;
     float:left;
 }
 
@@ -23,4 +23,20 @@
 
 .navigation-utilities-item{
     margin-left:3rem;
+}
+
+
+@media (max-width:700px){
+    .navigation-utilities{
+        width:100%;
+        margin-left:0rem;
+        height:10vh;
+    }
+    .navigation-utilities-item {
+        margin-left: 0rem;
+        
+    }
+    .navigation-utilities-item [class^="mif-"],.navigation-utilities-item [class^="fas"]{
+        font-size:1.5rem;
+    }
 }

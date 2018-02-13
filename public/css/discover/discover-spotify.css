@@ -3,6 +3,7 @@
     display:flex;
     align-content:center;
     transition: background-color 0.3s;
+    color:#fdf5e6;
 }
 
 .discover-bandCard-spotify:hover{
