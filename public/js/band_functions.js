@@ -1,6 +1,5 @@
 const addBandForm = document.querySelector(".add-form");
 const addBandFormInputs = addBandForm.querySelectorAll(".form-input-row>.add-form-input,.form-input-row>.tooltip>.add-form-input");
-console.log(addBandFormInputs);
 const FavoriteToast = document.querySelector(".toast.toast-favorite");
 
 const ShowFavoriteToast = (add)=> {
@@ -208,7 +207,6 @@ ChatBtns.forEach(ChatBtn=>{
 //notifies everyone else that enjoys a certain genre other than the person that added the band to the site that the band has been added to the site
 //because this person has not added the band, I am not adding the card as a favorite
 socket.on(`new_band_${username}`,BandObj=>{
-    console.log(BandObj);
     createNewBandToast(BandObj);
     incrementNotifNumber();
     createNotification(BandObj);

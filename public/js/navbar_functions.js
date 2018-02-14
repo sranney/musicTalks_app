@@ -19,6 +19,9 @@ const notificationsMenu_content = document.querySelector("#notifications_side_na
 const onlineUsersMenu = document.querySelector("#onlineUsers_side_nav");
 const onlineUsersMenu_content = document.querySelector("#onlineUsers_side_nav>.side-nav-content");
 
+const NavExpandBtn = document.querySelector(".expandMenuBtn");
+const NavBar = document.querySelector(".navigation-bar");
+
 //open search modal
 SearchBtn.addEventListener("click",()=>{
     SearchModal.classList.remove("hidden");
@@ -64,3 +67,17 @@ allBands.addEventListener("click",()=>{
 DiscoverBtn.addEventListener("click",()=>{
     window.location.href="/discover";
 })
+
+
+
+NavExpandBtn.addEventListener("click",function(){
+    if(this.classList.contains("expanded")){
+        this.classList.remove("expanded");
+        NavBar.classList.remove("expanded");
+        NavBar.style.overflow = "hidden";
+    } else {
+        this.classList.add("expanded");
+        NavBar.classList.add("expanded");
+        setTimeout(()=>NavBar.style.overflow="visible",300);
+    }
+});

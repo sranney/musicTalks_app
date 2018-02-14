@@ -75,6 +75,10 @@ router.get("/all",authCheck,(req,res)=>{
     })
 })
 
+router.get("/search",authCheck,(req,res)=>{
+    res.redirect("/home");
+})
+
 router.post("/search",authCheck,(req,res)=>{
     const {username,notifications} = req.user;
     const numNotifs = notifications.length;
@@ -122,9 +126,7 @@ router.post("/search",authCheck,(req,res)=>{
 })
 
 router.post("/favorite",authCheck,(req,res)=>{
-    console.log(req.body);
     const {username} = req.user;
-    console.log(username);
     let {name} = req.body;
     name = name.indexOf("_")>-1 ? name.replace("_"," ") : name;
     User.update({username},{$addToSet:{favoriteBands:name}}).then((data)=>{

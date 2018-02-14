@@ -77,3 +77,15 @@ span.onlineUser-card-room {
 /* .chart_container{
     transform: scale(0.3);
 } */
+
+@media (max-width:1200px){
+    
+
+    .onlineUser-card-room{
+        display:none;
+    }
+    .onlineUser-card-username{
+        border-right:0px solid rgb(61, 117, 108);
+        width:100%;
+    }
+}

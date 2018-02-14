@@ -108,3 +108,20 @@
     right:2.5%;
     transform: translate(-50%,-50%);
 }
+
+@media (max-width:1200px){
+    .thumbnail-name,
+    .thumbnail-genre,
+    .thumbnail-fans,
+    .thumbnail-links{
+        position:static;
+        display:block;
+        margin:0 auto;
+        transform: translate(0%,0%);
+    }    
+    .thumbnail_expandable_back>.thumbnail-links{
+        width:100%;
+        display:flex;
+        justify-content:center;
+    }
+}

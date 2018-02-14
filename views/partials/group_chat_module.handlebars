@@ -12,10 +12,12 @@
                         <p class="message-sender">{{this.username}}</p>
                         <p class="message-date">{{this.dateTime}}</p>
                     </div>
-                    
+                     <br>
                     {{#if this.isYouTube}}
+                       
                         <iframe class="YouTubeVid" src="{{this.message}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     {{else if this.isSpotify}}
+                       
                         <iframe class="SpotifyPlayList" src="{{this.message}}" frameborder="0" allowtransparency="true"></iframe>
                     {{else}}
                         <p class="message-text">{{this.message}}</p>
@@ -39,8 +41,8 @@
             {{/each}}
         </div>
         <form action="/group_chat/send" method="post" class="group_chat-form">
-            <input type="text" name="message" class="group-chat-form-input" placeholder="Enter Message Here (You Can Enter a YouTube or Spotify URL here as well)" required>
-            <button class="group-chat-form-btn">Send Message to Group <i class="icofont icofont-send-mail"></i></button>
+            <input type="text" name="message" class="group-chat-form-input" placeholder="Enter Message, YouTube/Spotify URL" required>
+            <button class="group-chat-form-btn">Send <span class="restofBtnText">Message to Group</span> <i class="icofont icofont-send-mail"></i></button>
         </form>
     </div>
     <div class="group_chat-section group_chat-resources">

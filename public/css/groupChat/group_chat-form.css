@@ -42,3 +42,9 @@
 .group-chat-form-input:focus::-webkit-input-placeholder{
     color: #1B1C1C;
 }
+
+@media (max-width:1200px){
+    .restofBtnText{
+        display:none;
+    }
+}

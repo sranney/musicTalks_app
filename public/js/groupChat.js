@@ -113,8 +113,6 @@ MsgForm.addEventListener("submit",(e)=>{
     MsgInput.value = "";
 })
 
-
-
 function appendMessage(msg){
     var message = Mustache.render(template,{//use mustache rendering
         text:video,
@@ -127,7 +125,36 @@ function appendMessage(msg){
 const favoriteButton = document.querySelector(".group-chat-resources-btn>.mif-heart");
 
 favoriteButton.addEventListener("click",function(){
-    $.post("/bands/favorite",{name:room},(data)=>{
-        this.parentNode.classList.add("favorited");
-    });
+    if(!this.parentNode.classList.contains("favorited")){
+        $.post("/bands/favorite",{name:room},(data)=>{
+            this.parentNode.classList.add("favorited");
+            ShowFavoriteToast();
+        });
+    }
 });
+
+const resourceDiscoverBtn = document.querySelector(".group-chat-resources-btn.discover");
+
+resourceDiscoverBtn.addEventListener("click",()=>{
+    const url = window.location.href.replace("group_chat","discover");
+    window.location.href=url;
+})
+
+//////////////for band card buttons
+const bandCardFavoriteButton = document.querySelector(".band-card-btn>.mif-heart");
+
+bandCardFavoriteButton.addEventListener("click",function(){
+    if(!this.parentNode.classList.contains("favorited")){
+        $.post("/bands/favorite",{name:room},(data)=>{
+            this.parentNode.classList.add("favorited");
+            ShowFavoriteToast();
+        });
+    }
+});
+
+const bandCardDiscoverBtn = document.querySelector(".band-card-btn.discover");
+
+bandCardDiscoverBtn.addEventListener("click",()=>{
+    const url = window.location.href.replace("group_chat","discover");
+    window.location.href=url;
+})

@@ -37,3 +37,15 @@
 .side-nav-content.hidden{
     left:-100%;
 }
+
+@media (max-width:1200px){
+    .side-nav-content{
+        width:35%;
+    }
+}
+
+@media (max-width:900px){
+    .side-nav-content{
+        width:45%;
+    }
+}

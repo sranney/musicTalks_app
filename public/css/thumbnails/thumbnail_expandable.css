@@ -17,3 +17,17 @@
     top:100%;
     transition-delay: 0.5s;
 }
+
+@media (max-width:1200px){
+    .thumbnail_expandable{
+        height:30vw;
+        width:30vw;
+    }
+}
+
+@media (max-width:1000px){
+    .thumbnail_expandable{
+        height:50vw;
+        width:50vw;
+    }
+}

@@ -2,6 +2,9 @@
     border-bottom: 2px solid #fdf5e6;
     transition: background-color 0.3s;
     padding-top:1.5rem;
+    display: flex;
+    align-items: center;
+    color: #fdf5e6;
 }
 .discover-bandCard-header:hover{
     background-color: rgb(0,77,64);
@@ -23,4 +26,20 @@
 .bandTitle:hover{
     letter-spacing: 0.6rem;
     transform: scale(1.1);
+}
+
+.discover-bandCard-header>.mif-bubbles,.discover-bandCard-header>.mif-heart{
+    cursor: pointer;
+}
+
+.discover-bandCard-header>.mif-bubbles{
+    margin-left: 5rem;
+    font-size: 3em;
+}
+.discover-bandCard-header>.mif-heart{
+    margin-right: 5rem;
+    font-size: 3em;
+}
+.discover-bandCard-header>.mif-heart.favorited{
+color:#ACDEB8;
 }

@@ -83,3 +83,16 @@
     color: #fdf5e6;
     text-decoration:none;
 }
+
+@media (max-width: 1000px){
+    .bio,.externalLinks{
+        width:100%;
+        border-bottom: 2px solid #fdf5e6;
+    }
+    .discover-bandCard-bioLinks{
+        display:block;
+    }   
+    .externalLinks_list{
+        margin:0 auto;
+    } 
+}

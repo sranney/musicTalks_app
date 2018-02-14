@@ -32,10 +32,11 @@ const getWikiAndRender = (band,req,res,currentUser,noNotifications,notifications
         bio = bio.replace("\n","<br>");
         
         const validSpotifyURL = band.spotify.indexOf("open.spotify.com")>-1;
-
+        const isFan = req.user.favoriteBands.indexOf(band.name)>-1;
         res.render("discover",{
                                 band,
                                 validSpotifyURL,
+                                isFan,
                                 externalLinks,
                                 bio,
                                 discover:true,

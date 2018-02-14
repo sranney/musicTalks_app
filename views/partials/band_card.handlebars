@@ -1,9 +1,16 @@
 <div class="band-card">
-    <div class="band-card-pic" style="background-image:url({{cover_url}})"></div>
+    
     <div class="band-card-media">
-        <h1>{{name}}</h2>
-        <h2>{{genre}}</h2>
-        <h2>Number of Fans: {{numFans}}</h2>
-        {{#if validSpotifyURL}}{{>spotify}}{{else}}<h2>No Spotify Playlist</h2>{{/if}}
+        <div class="band-card-pic" style="background-image:url({{cover_url}})"></div>
+        <div class="band-card-content">        
+            <div class="band-card-title">
+                <button class="band-card-btn discover"><i class="fas fa-music"></i></button>
+                <h1>{{name}}</h1>
+                <button class="band-card-btn {{#if isFan}}favorited{{/if}}"><i class="mif-heart"></i></button>        
+            </div>
+            <h2>{{genre}}</h2>
+            <h2>Fans: {{numFans}}</h2>
+            {{#if validSpotifyURL}}{{>spotify}}{{else}}<h2>No Spotify Playlist</h2>{{/if}}
+        </div>
     </div>
 </div>

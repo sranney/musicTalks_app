@@ -29,3 +29,12 @@
     background-color: #eee;
 }
 
+@media (max-width:1100px){
+    .group_chat-section.group_chat-onlinebandUsers,
+    .group_chat-section.group_chat-resources{
+        display:none;
+    }    
+    .group_chat-section.group_chat-container {
+        width:100%;
+    }    
+}
