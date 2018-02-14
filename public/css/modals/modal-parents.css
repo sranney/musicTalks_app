@@ -36,3 +36,9 @@
     padding:1rem;
     height:50vh;
 }
+
+@media (max-width:1000px){
+    .modal-content{
+        width:100vw;
+    }
+}

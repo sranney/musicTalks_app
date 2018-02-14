@@ -78,13 +78,14 @@
 .form-input-row{
     width:100%;
     display:flex;
+    flex-wrap: wrap;
     justify-content:space-around;
 }
-.form-input-row>input{
+.form-input-row>.tooltip{
     width:50%;
 }
 
-.form-input-row.form_links>input{
+.form-input-row.form_links>.tooltip{
     width:33%;
 }
 
@@ -96,4 +97,12 @@
     display: none;
     border-radius:6px;
     background-image: linear-gradient(to right bottom,#045043 0%,#aadcb6 50%,#045043 100%);
+}
+
+@media (max-width:1200px){
+    .add-form-input {
+        padding:0px;
+        font-size:1rem;
+    }
+
 }
