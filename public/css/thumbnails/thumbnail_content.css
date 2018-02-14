@@ -110,10 +110,10 @@
 }
 
 @media (max-width:1200px){
-    .thumbnail-name,
-    .thumbnail-genre,
-    .thumbnail-fans,
-    .thumbnail-links{
+    .thumbnail_expandable_back>.thumbnail-links>.thumbnail-name,
+    .thumbnail_expandable_back>.thumbnail-links>.thumbnail-genre,
+    .thumbnail_expandable_back>.thumbnail-links>.thumbnail-fans,
+    .thumbnail_expandable_back>.thumbnail-links>.thumbnail-links{
         position:static;
         display:block;
         margin:0 auto;
