@@ -148,6 +148,7 @@ function addToFavorites(){
     $.post("/bands/favorite",
             {name},
             data=>{
+                console.log(data);
                 //client side analysis of whether the band has already been favorited - this is also performed on the server-side
                 if(!this.classList.contains("favorited")){
                     //if the band has not already been favorited by the user, then do the following
@@ -155,9 +156,10 @@ function addToFavorites(){
                     this.classList.add("favorited")
                     //show "favorite" toast
                     ShowFavoriteToast();
-                    //change properties of 
+                    //change properties of thumbnail
                     const thumbnail_front = this.parentNode.parentNode.previousElementSibling;
                     const favorited = document.createElement("div");
+                    //add "sticker" to show that the band has been favorited
                     favorited.classList.add("thumbnail_favorited");
                     const iconFontSpan = document.createElement("span");
                     iconFontSpan.classList.add("mif-checkmark");
@@ -165,6 +167,7 @@ function addToFavorites(){
                     thumbnail_front.appendChild(favorited);
                     const thumbnail_container = this.parentNode.parentNode.parentNode.parentNode;
                     const thumbnail = this.parentNode.parentNode.parentNode;
+                    //if card was in recommendations box, do the following
                     if(thumbnail_container.classList.contains("thumbnail_container--recommendations")){
                         thumbnail.classList.remove("shown");
                         setTimeout(()=>{                            
@@ -177,12 +180,20 @@ function addToFavorites(){
                             const back_side = thumbnail.querySelector(".thumbnail_expandable_back");
                             back_side.classList.remove("thumbnail_expandable_back");
                             back_side.classList.add("thumbnail_flip_back");
+                            const fansStat = document.createElement("p");
+                            fansStat.classList.add("thumbnail-fans");
+                            fansStat.textContent = `Number of Fans: ${data.fans.length+1}`;
+                            back_side.appendChild(fansStat);
                             document.querySelector(".thumbnail_container").appendChild(thumbnail);
                             if(!thumbnail_container.querySelector(".thumbnail_expandable")){
                                 const Greetings = document.querySelector(".greeting");
                                 Greetings.textContent = Greetings.textContent.replace(" Here's some recommendations for you.","");
                             }
                         },300);
+                    } else {
+                        const FansStat = thumbnail.querySelector(".thumbnail-fans");
+                        let numFans = FansStat.textContent.replace("Number of Fans: ","");
+                        FansStat.textContent = `Number of Fans: ${parseInt(numFans)+1}`;
                     }
                 }
             }

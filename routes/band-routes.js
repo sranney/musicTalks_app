@@ -6,9 +6,9 @@ const authCheck = require("../server_functions/authCheck.js");
 
 const markFavorites = (dataArr,username) => {
     return dataArr.map(band=>{
-        const {fans,name,genre,spotify,cover_url,thumbnail_url} = band;
+        const {fans,name,genre,spotify,cover_url,thumbnail_url,numFans} = band;
         const fanOf = fans.indexOf(username)!==-1;
-        const band_mod = {fans,name,genre,spotify,cover_url,thumbnail_url,fanOf};
+        const band_mod = {fans,name,genre,spotify,cover_url,thumbnail_url,fanOf,numFans};
         return band_mod;
     })
 }
@@ -63,7 +63,13 @@ router.get("/all",authCheck,(req,res)=>{
     });    
     const currentUser = username;
     Band.find({}).then((bands)=>{
+        bands = bands.map(band=>{
+            band.numFans = band.fans.length;
+            return band;
+        });
+        console.log(bands);
         bands = markFavorites(bands,currentUser);
+        console.log(bands);
         res.render("allBands",{user:req.user,
                                 noNotifications,
                                 notifications_forDisplay,
@@ -131,11 +137,11 @@ router.post("/favorite",authCheck,(req,res)=>{
     name = name.indexOf("_")>-1 ? name.replace("_"," ") : name;
     User.update({username},{$addToSet:{favoriteBands:name}}).then((data)=>{
         console.log(data);
-        Band.update({name},{$addToSet:{fans:username}}).then((data2)=>{
+        Band.findOneAndUpdate({name},{$addToSet:{fans:username}}).then((data2)=>{
             console.log(data2);
-            res.send("band added to favorites");
+            res.send(data2);
         });
     });
-})
+});
 
 module.exports = router;
